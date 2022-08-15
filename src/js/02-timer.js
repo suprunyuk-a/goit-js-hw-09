@@ -28,7 +28,7 @@ document.querySelector('[data-start]').addEventListener('click', event => {
   timeEnd = timeStart - new Date();
   timerId = setInterval(() => {
     timeEnd = timeEnd - 1000;
-    timer = convertMs(timeEnd);
+    const timer = convertMs(timeEnd);
     timeEnd < 1000 ? clearInterval(timerId) : true;
     document.querySelector('[data-days]').innerHTML = timer.days;
     document.querySelector('[data-hours]').innerHTML = timer.hours;

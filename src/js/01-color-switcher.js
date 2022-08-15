@@ -17,4 +17,5 @@ elemStart.addEventListener('click', event => {
 
 elemStop.addEventListener('click', event => {
   clearInterval(timerId);
+  elemStart.removeAttribute('disabled');
 });
