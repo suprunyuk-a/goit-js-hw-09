@@ -48,15 +48,11 @@ function convertMs(ms) {
   const hour = minute * 60;
   const day = hour * 24;
 
-  // Remaining days
   const days = addLeadingZero(String(Math.floor(ms / day)));
-  // Remaining hours
   const hours = addLeadingZero(String(Math.floor((ms % day) / hour)));
-  // Remaining minutes
   const minutes = addLeadingZero(
     String(Math.floor(((ms % day) % hour) / minute))
   );
-  // Remaining seconds
   const seconds = addLeadingZero(
     String(Math.floor((((ms % day) % hour) % minute) / second))
   );
